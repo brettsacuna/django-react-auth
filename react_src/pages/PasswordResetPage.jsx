@@ -17,6 +17,8 @@ class Body extends React.Component {
         Auth.reset_password(email)
             .catch(function(err) {
                 console.log("Error changing password", err)
+
+                if (err) alert(error.response);
             })
             .done(function(data) {
                 console.log(data);

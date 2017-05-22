@@ -10,8 +10,8 @@ class Body extends React.Component {
     render() {
         return(
             <div className="container-fluid jumbotron text-center content">
-                <h1>React Auth</h1>
-                <p>This is a demo site for ReactJS Authentication with django-rest-auth.</p>
+                <h1>Welcome to Vendoo Store</h1>
+                <p>Where you will find what you are looking for.</p>
                 <Link to='/signup' className="btn btn-lg btn-success">Sign Up</Link> <strong>or</strong> &nbsp;
                 <Link to='/login' className="btn btn-lg btn-success">Login</Link>
             </div>

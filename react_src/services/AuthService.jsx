@@ -101,6 +101,14 @@ class AuthService {
                 UserActions.loginUser(token);
                 return true;
             }
+        ).catch(
+            function(error) {
+                console.log(error);
+
+                if (error) alert(error.response);
+
+                return false;
+            }
         )
     }
 }
