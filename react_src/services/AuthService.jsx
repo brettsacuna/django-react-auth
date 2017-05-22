@@ -103,9 +103,14 @@ class AuthService {
             }
         ).catch(
             function(error) {
-                console.log(error);
+                var error_response = JSON.parse(error.response), message_error = "";
 
-                if (error) alert(error.response);
+                message_error += 'Errors\n\n' ;
+                for (var er in error_response) {
+                    message_error += "\t - "+error_response[er][0]+"\n"
+                }
+
+                if (error) alert(message_error);
 
                 return false;
             }

@@ -16,13 +16,20 @@ class Body extends React.Component {
         console.log(email);
         Auth.reset_password(email)
             .catch(function(err) {
-                console.log("Error changing password", err)
+                console.log("Error changing password", err);
 
-                if (err) alert(error.response);
+                var error_response = JSON.parse(err.response), message_error = "";
+
+                message_error += 'Errors\n\n' ;
+                for (var er in error_response) {
+                    message_error += "\t - "+error_response[er][0]+"\n"
+                }
+
+                if (err) alert(message_error);
             })
             .done(function(data) {
                 console.log(data);
-                History.replaceState(null, '/');
+                //History.replaceState(null, '/');
             });
     }
 

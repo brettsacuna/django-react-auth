@@ -35,7 +35,7 @@ class Body extends React.Component {
                     <div className="form-group">
                         <label htmlFor="username">Username</label>
                         <input type="text" className="form-control" id="username"
-                               placeholder="Email Address" ref="username"/>
+                               placeholder="User name" ref="username"/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="password">Password</label>
